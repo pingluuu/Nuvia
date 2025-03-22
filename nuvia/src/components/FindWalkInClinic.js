@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './FindWalkInClinic.css';
 import mapImage from '../assets/map.jpg';
 
-// Sample clinic data
 const clinicData = [
-  { name: '1CLINIC', waitTime: 27, phone: '123-456-7890' },
-  { name: 'HealthOne Harbourfront', waitTime: 12, phone: '987-654-3210' },
-  { name: 'PinPoint - Infinity Health Downtown', waitTime: 128, phone: '555-123-4567' },
-  { name: 'MCI - Royal Bank Plaza', waitTime: 39, phone: '111-222-3333' },
-  { name: 'Integra Health Centre', waitTime: 43, phone: '444-555-6666' },
+  { name: '1CLINIC', waitTime: 50, phone: '123-456-7890' },
+  { name: 'HealthOne Harbourfront', waitTime: 15, phone: '987-654-3210' },
+  { name: 'PinPoint - Infinity Health Downtown', waitTime: 25, phone: '555-123-4567' },
+  { name: 'MCI - Royal Bank Plaza', waitTime: 30, phone: '111-222-3333' },
+  { name: 'Integra Health Centre', waitTime: 40, phone: '444-555-6666' },
 ];
 
 // Custom sorting algorithm (Bubble Sort for demonstration)
@@ -28,7 +27,6 @@ const FindWalkInClinic = () => {
   const [clinics, setClinics] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching and sorting data
     const sortedClinics = sortClinicsByWaitTime(clinicData);
     setClinics(sortedClinics);
   }, []);
