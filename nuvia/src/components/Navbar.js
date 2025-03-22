@@ -10,10 +10,12 @@ const Navbar = () => {
       </div>
       <nav className="nav-right">
         <Link to="/login">Login</Link>
-        <Link to="/profile">Profile</Link>
+        <Link to="/Profile">Profile</Link>
       </nav>
     </header>
   );
 };
+
+
 
 export default Navbar;

@@ -1,0 +1,76 @@
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .profile-top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4A90E2;
+  }
+  
+  .profile-info h3 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .profile-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .edit-btn, .settings-btn, .logout-btn, .delete-btn {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .edit-btn, .settings-btn {
+    background-color: #4A90E2;
+    color: white;
+  }
+  
+  .edit-btn:hover, .settings-btn:hover {
+    background-color: #357ABD;
+  }
+  
+  .danger-zone {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .logout-btn {
+    background-color: #e67e22;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d35400;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

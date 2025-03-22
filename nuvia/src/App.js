@@ -6,6 +6,8 @@ import FindWalkInClinic from './components/FindWalkInClinic';
 import Footer from './components/Footer';
 import './App.css';
 import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+
           <Route path="/community" element={<Community />} />
           <Route path="/find-nannies" element={<FindNannies />} />
           <Route path="/find-walk-in-clinic" element={<FindWalkInClinic />} />
@@ -30,9 +34,9 @@ const Home = () => {
       {/* Hero Section with background */}
       <section className="hero-background">
         <div className="hero-content">
-          <h1>Babysitter & Nanny Services in Your City</h1>
-          <p>Trusted by families to find care services that fit their needs.</p>
-          <Link to="/find-nannies"><button className="nanny-btn">🍼 Find a Nanny</button></Link>
+          <h1>Walk-In Clinics Near You</h1>
+          <p>Find quick and convenient access to healthcare services, no appointment needed.</p>
+          <Link to="/find-walk-in-clinic"><button className="clinic-btn">🏥 Find a Walk-in Clinic</button></Link>
         </div>
       </section>
 
