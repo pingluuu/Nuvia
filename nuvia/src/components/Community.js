@@ -1,12 +1,7 @@
 import React from 'react';
 
 const Community = () => {
-  return (
-    <div>
-      <h2>Community</h2>
-      <p>Welcome to the community section. Here you can find resources and connect with others.</p>
-    </div>
-  );
+  return <h2>Welcome to the Community Page</h2>;
 };
 
 export default Community;

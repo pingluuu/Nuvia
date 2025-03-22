@@ -1,25 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FindNannies = () => {
-  const [location, setLocation] = useState('');
-
-  const handleSearch = () => {
-    // Logic to find nannies based on location or criteria
-    console.log('Searching for nannies in:', location);
-  };
-
-  return (
-    <div>
-      <h2>Find Nannies</h2>
-      <input
-        type="text"
-        placeholder="Enter location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
-  );
+  return <h2>Find a trusted nanny near you</h2>;
 };
 
 export default FindNannies;
