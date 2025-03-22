@@ -10,7 +10,6 @@ const clinicData = [
   { name: 'Integra Health Centre', waitTime: 40, phone: '444-555-6666' },
 ];
 
-// Custom sorting algorithm (Bubble Sort for demonstration)
 const sortClinicsByWaitTime = (clinics) => {
   const sortedClinics = [...clinics];
   for (let i = 0; i < sortedClinics.length - 1; i++) {
