@@ -1,0 +1,103 @@
+.find-clinic-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.clinic-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.clinic-header h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.clinic-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.clinic-map-and-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.map-image {
+  flex: 1 1 50%;
+  max-width: 550px;
+}
+
+.map-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-list {
+  flex: 1 1 40%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.clinic-list h3 {
+  margin-bottom: 15px;
+  color: #4a90e2;
+}
+
+.clinic-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clinic-list li {
+  font-size: 1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.clinic-list li:last-child {
+  border-bottom: none;
+}
+
+.clinic-note {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+.clinic-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.call-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: #c0392b;
+}
+

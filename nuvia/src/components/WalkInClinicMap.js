@@ -30,11 +30,8 @@ const FindWalkInClinic = () => {
           <h3>📊 Clinic Wait Time Ranking</h3>
           <ul>
             {mockClinics.map((clinic, index) => (
-              <li key={index} className="clinic-list-item">
-                <div className="clinic-info">
-                  <strong>{clinic.name}</strong> — {clinic.wait}
-                </div>
-                <button className="call-btn">Call</button>
+              <li key={index}>
+                <strong>{clinic.name}</strong> — {clinic.wait}
               </li>
             ))}
           </ul>
