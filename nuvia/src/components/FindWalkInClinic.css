@@ -4,31 +4,32 @@
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+  background-color: #fff8e1; /* Light yellow background */
 }
 
 .clinic-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px; /* Reduced space between header and content */
 }
 
 .clinic-header h2 {
   font-size: 2rem;
-  color: #2c3e50;
+  color: #f39c12; /* Orange color for header */
   margin-bottom: 10px;
 }
 
 .clinic-header p {
   font-size: 1rem;
-  color: #555;
+  color: #f1c40f; /* Lighter yellow text for description */
 }
 
 .clinic-map-and-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px; /* Increased space between the boxes */
   justify-content: center;
   align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 10px; /* Reduced gap between header and first clinic */
 }
 
 .map-image {
@@ -44,15 +45,18 @@
 
 .clinic-list {
   flex: 1 1 40%;
-  background-color: #f9f9f9;
+  background-color: #fdf2e9; /* Lighter yellow for clinic list */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased space between each clinic item */
 }
 
 .clinic-list h3 {
   margin-bottom: 15px;
-  color: #4a90e2;
+  color: #f39c12; /* Orange color for the ranking header */
 }
 
 .clinic-list ul {
@@ -60,44 +64,86 @@
   padding: 0;
 }
 
-.clinic-list li {
-  font-size: 1rem;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+.clinic-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; /* Increased gap between items inside each clinic */
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #f39c12; /* Orange border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffecd1; /* Soft orange for each clinic item */
+  transition: transform 0.2s ease;
 }
 
-.clinic-list li:last-child {
-  border-bottom: none;
+.clinic-list-item:hover {
+  transform: translateY(-4px);
+}
+
+.clinic-info {
+  flex: 1;
+}
+
+.clinic-info strong {
+  font-size: 1.2rem;
+  color: #f39c12; /* Orange color for clinic names */
+}
+
+.clinic-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.call-btn, .directions-btn, .book-btn {
+  background-color: #f39c12; /* Orange button background */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 140px;
+}
+
+.call-btn:hover, .directions-btn:hover, .book-btn:hover {
+  background-color: #e67e22; /* Darker orange on hover */
 }
 
 .clinic-note {
   margin-top: 40px;
   font-size: 0.9rem;
   text-align: center;
-  color: #777;
+  color: #f39c12; /* Orange for note text */
   font-style: italic;
 }
 
-.clinic-list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
+@media (max-width: 768px) {
+  .clinic-map-and-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.call-btn {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .map-image, .clinic-list {
+    flex: 1 1 100%;
+  }
 
-.call-btn:hover {
-  background-color: #c0392b;
-}
+  .clinic-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .clinic-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .call-btn, .directions-btn, .book-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
