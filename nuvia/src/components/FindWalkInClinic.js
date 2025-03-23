@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './FindWalkInClinic.css';
 import mapImage from '../assets/map.jpg';
 
-// Mock Clinic Data
 const mockClinics = [
   { 
     name: '1CLINIC', wait: '10 mins', type: "Walk-In Medical Clinic", 
@@ -26,19 +25,14 @@ const mockClinics = [
   },
 ];
 
-// Convert "10 mins" to 10 (for sorting)
-const convertWaitTimeToMinutes = (wait) => {
-  if (!wait) return Infinity;
-  const minutes = parseInt(wait.split(' ')[0]);
-  return isNaN(minutes) ? Infinity : minutes;
-};
+const convertWaitTimeToMinutes = (wait) => parseInt(wait.split(' ')[0]);
 
 const FindWalkInClinic = () => {
   const [sortedClinics, setSortedClinics] = useState([]);
 
   useEffect(() => {
-    const sorted = [...mockClinics].sort(
-      (a, b) => convertWaitTimeToMinutes(a.wait) - convertWaitTimeToMinutes(b.wait)
+    const sorted = [...mockClinics].sort((a, b) => 
+      convertWaitTimeToMinutes(a.wait) - convertWaitTimeToMinutes(b.wait)
     );
     setSortedClinics(sorted);
   }, []);
@@ -51,43 +45,34 @@ const FindWalkInClinic = () => {
       </div>
 
       <div className="clinic-map-and-list">
+        {/* LEFT: MAP */}
         <div className="map-image">
           <img src={mapImage} alt="Walk-in clinic map" />
         </div>
 
+        {/* RIGHT: CLINIC LIST */}
         <div className="clinic-list">
           <h3>📊 Clinic Wait Time Ranking</h3>
           {sortedClinics.map((clinic, index) => (
-            <ClinicCard key={index} clinic={clinic} />
+            <div key={index} className="clinic-list-item">
+              <div className="clinic-info">
+                <strong>{clinic.name}</strong>
+                <p>⏳ {clinic.wait} | 📍 {clinic.distance} | 🏥 {clinic.type}</p>
+                <p>📍 {clinic.address}</p>
+                <p>🕒 {clinic.isOpen ? "Open Now" : `Opens at ${clinic.opensAt}`}</p>
+              </div>
+              <div className="clinic-buttons">
+                <button className="call-btn">📞 Call</button>
+                <button className="directions-btn">🗺️ Directions</button>
+                <button className="book-btn">📅 Book</button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
       <div className="clinic-note">
-        <p>
-          <em>All clinic locations and wait times displayed here are mock data for demo purposes only.</em>
-        </p>
-      </div>
-    </div>
-  );
-};
-
-// Styled Clinic Card Component
-const ClinicCard = ({ clinic }) => {
-  return (
-    <div className="clinic-list-item">
-      <div className="clinic-info">
-        <strong>{clinic.name}</strong>
-        <p>⏳ Wait Time: {clinic.wait}</p>
-        <p>📍 {clinic.distance} | {clinic.address}</p>
-        <p>🏷 {clinic.type}</p>
-        <p>{clinic.isOpen ? "🟢 Open Now" : `🔴 Opens at ${clinic.opensAt}`}</p>
-      </div>
-
-      <div className="clinic-buttons">
-        <button className="call-btn">📞 Call</button>
-        <button className="directions-btn">📍 Directions</button>
-        <button className="book-btn">📝 Book</button>
+        <p><em>All clinic locations and wait times displayed here are mock data for demo purposes only.</em></p>
       </div>
     </div>
   );
