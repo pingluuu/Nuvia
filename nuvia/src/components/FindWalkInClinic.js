@@ -1,33 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FindWalkInClinic.css';
-import mapImage from '../assets/map.jpg';
+import mapImage from '../assets/map.jpg'; // Make sure to place your map image in src/assets/
 
-const clinicData = [
-  { name: '1CLINIC', waitTime: 50, phone: '123-456-7890' },
-  { name: 'HealthOne Harbourfront', waitTime: 15, phone: '987-654-3210' },
-  { name: 'PinPoint - Infinity Health Downtown', waitTime: 25, phone: '555-123-4567' },
-  { name: 'MCI - Royal Bank Plaza', waitTime: 30, phone: '111-222-3333' },
-  { name: 'Integra Health Centre', waitTime: 40, phone: '444-555-6666' },
+const mockClinics = [
+  { name: '1CLINIC', wait: '10 mins' },
+  { name: 'HealthOne Harbourfront', wait: '15 mins' },
+  { name: 'PinPoint - Infinity Health Downtown', wait: '25 mins' },
+  { name: 'MCI - Royal Bank Plaza', wait: '30 mins' },
+  { name: 'Integra Health Centre', wait: '40 mins' },
 ];
 
-const sortClinicsByWaitTime = (clinics) => {
-  const sortedClinics = [...clinics];
-  for (let i = 0; i < sortedClinics.length - 1; i++) {
-    for (let j = 0; j < sortedClinics.length - i - 1; j++) {
-      if (sortedClinics[j].waitTime > sortedClinics[j + 1].waitTime) {
-        [sortedClinics[j], sortedClinics[j + 1]] = [sortedClinics[j + 1], sortedClinics[j]];
-      }
-    }
-  }
-  return sortedClinics;
+// Helper function to convert wait times to a number
+const convertWaitTimeToMinutes = (wait) => {
+  return parseInt(wait.split(' ')[0]);
 };
 
 const FindWalkInClinic = () => {
-  const [clinics, setClinics] = useState([]);
+  const [sortedClinics, setSortedClinics] = useState([]);
 
   useEffect(() => {
-    const sortedClinics = sortClinicsByWaitTime(clinicData);
-    setClinics(sortedClinics);
+    // Sort clinics by wait time (ascending)
+    const sorted = [...mockClinics].sort((a, b) =>
+      convertWaitTimeToMinutes(a.wait) - convertWaitTimeToMinutes(b.wait)
+    );
+    setSortedClinics(sorted);
   }, []);
 
   return (
@@ -48,12 +44,16 @@ const FindWalkInClinic = () => {
         <div className="clinic-list">
           <h3>📊 Clinic Wait Time Ranking</h3>
           <ul>
-            {clinics.map((clinic, index) => (
+            {sortedClinics.map((clinic, index) => (
               <li key={index} className="clinic-list-item">
                 <div className="clinic-info">
-                  <strong>{clinic.name}</strong> — {clinic.waitTime} mins
+                  <strong>{clinic.name}</strong> — {clinic.wait}
                 </div>
-                <button className="call-btn" onClick={() => window.location.href = `tel:${clinic.phone}`}>Call</button>
+                <div className="clinic-buttons">
+                  <button className="call-btn">Call</button>
+                  <button className="directions-btn">Get Directions</button>
+                  <button className="book-btn">Book Appointment</button>
+                </div>
               </li>
             ))}
           </ul>
@@ -63,7 +63,7 @@ const FindWalkInClinic = () => {
       <div className="clinic-note">
         <p>
           <em>
-            Data is for demonstration purposes only. Availability and wait times may vary.
+            All clinic locations and wait times displayed here are mock data for demo purposes only.
           </em>
         </p>
       </div>
