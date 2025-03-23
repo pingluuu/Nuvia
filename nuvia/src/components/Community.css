@@ -1,0 +1,140 @@
+.community-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .community-page h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .community-page p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .post-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .post-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .post-form button:hover {
+    background-color: #357abd;
+  }
+  
+  .post-list .post-item {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4a90e2;
+  }
+  
+  .post-header p {
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .post-actions button {
+    background-color: #ddd;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .post-actions button:hover {
+    background-color: #bbb;
+  }
+  
+  .comments-section h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #4a90e2;
+  }
+  
+  .comments-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  .comments-section li {
+    background-color: #fff;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  
+  .comments-section form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .comments-section input[type='text'] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .comments-section button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .comments-section button:hover {
+    background-color: #d35400;
+  }
+  
