@@ -1,0 +1,106 @@
+.nanny-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  .nanny-page h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .nanny-page p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .nanny-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .nanny-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .nanny-column:hover {
+    transform: translateY(-4px);
+  }
+  
+  .nanny-logo {
+    max-width: 160px;
+    margin-bottom: 20px;
+  }
+  
+  .nanny-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .nanny-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .nanny-details p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .nanny-details strong {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .contact-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #357abd;
+  }
+  
+  .contact-btn:disabled {
+    background-color: #aaa;
+    cursor: default;
+  }
+  
+  .nanny-rate {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  .nanny-experience {
+    color: #34495e;
+    font-style: italic;
+  }
+  
