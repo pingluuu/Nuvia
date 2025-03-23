@@ -1,30 +1,59 @@
+/* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 32px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    color: #4A90E2;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .nav-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  .nav-right a:hover {
-    color: #4A90E2;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: white;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left side: Logo + Nav */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: #f4c430;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f4c430;
+  text-decoration: none;
+}
+
+/* Nav links next to logo */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Right side: Login & Profile */
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+/* All nav buttons */
+.nav-links a,
+.nav-right a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover,
+.nav-right a:hover {
+  background-color: #f4c430;
+  color: white;
+}
